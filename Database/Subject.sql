@@ -1,0 +1,3 @@
+CREATE TABLE subject(
+sub_id INT NOT NULL PRIMARY KEY,
+name VARCHAR(100));
