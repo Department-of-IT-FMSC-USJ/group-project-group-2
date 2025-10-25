@@ -1,0 +1,2 @@
+CREATE DATABASE Edulink;
+USE Edulink;
