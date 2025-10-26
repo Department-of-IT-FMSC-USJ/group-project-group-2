@@ -7,7 +7,7 @@
     <title>Edulink</title>
     <link rel="stylesheet" href="../Frontend/mark_style.css">
 </head>
-<body>
+
 
 <body>
     <div class="header">
@@ -21,7 +21,6 @@
         <input type="radio" name="option" value="comment section">Comment section<br><br>
         <input type="radio" name="option" value="Extra-curricular">Extra-curricular<br><br>
         <input type="radio" name="option" value="attendance">Attendance<br><br>
-        <input type="radio" name="option" value="teacher-management">Teacher Management<br><br>
         <input type="submit" name="submitbtn" value="submit" placeholder="submit">
     
 
@@ -40,7 +39,7 @@ if (isset($_POST['submitbtn'])) {
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "comment section") {
-        header("Location: ");
+        header("Location:../Frontend/comments.html");
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "Extra-curricular") {

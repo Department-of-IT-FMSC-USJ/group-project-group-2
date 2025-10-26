@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'db.php';
+include 'dbconnection.php';
 
 $tid = $_SESSION['teacher_id'];
 

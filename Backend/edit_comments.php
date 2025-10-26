@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'db.php';
+include 'dbconnection.php';
 
 $tid = $_SESSION['teacher_id'];
 
@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         }
         else{
             echo"<script>
-            alert('You are NOT allowed to delete the comment');
+            alert('You are NOT allowed to edit the comment');
             window.location.href='../Frontend/edit_comments.html';
             </script>";
             exit();

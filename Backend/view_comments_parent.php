@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'db.php';
+include 'dbconnection.php';
 
 $pid = $_SESSION['parent_id'];
 
