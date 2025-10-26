@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLink- Student Monitoring System</title>
+    <link rel="stylesheet" href="parent-login.css">
+    <script src="../Backend/parentlogin.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="../resources/icon.jpeg" alt="EduLink icon" class="icon">
+        <h1>Gateway to effective student monitoring and management</span></h1>
+        
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </div>
+    <div class="login">
+
+       <form action="../Backend/parentlogin.php" method="POST" id="parent_login">
+            <h2 class="h2">Login</h2>
+            <div class="card1">
+    <input class="input" type="text" name="username" placeholder="Username" required>
+            </div>
+           <div class="card1">
+    <input class="input" type="email" name="email" placeholder="Email" required>
+           </div>
+
+        <div class="card1">
+             <input class="input" type="password" name="password" placeholder="Password" required>
+            </div>
+ <button class="button" type="submit" name="login">Login</button>
+  <p >Don't have an account? <a href="parentsignup.html" class="login-text">Sign Up</a></p>
+  
+        </form>
+
+    </div>
+
+</body>
+<footer>
+    <p>&copy; 2024 EduLink. All rights reserved.</p>
+</footer>
+</html>
