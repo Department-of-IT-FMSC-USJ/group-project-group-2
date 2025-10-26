@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url ("../resources/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+.navbar {
+    background-color: rgb(5, 64, 158);
+    height: 50px;
+}
+.nav-links {
+    margin-left: 900px;
+    padding-top: 6px;
+    color: rgb(0, 0, 0);
+}
+.navbar img {
+    position: absolute;
+    left: 50%;
+    width: 43px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid white;
+    margin-left: -700px;
+    margin-top: 2px;
+}
+.navbar h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -640px;
+    font-size: 17px;
+    color: black;
+    margin-top: 15px;
+    font-family: 'Times New Roman';
+}
+.navbar a {
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    padding: 5px 30px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: white;
+    background-color: rgb(151, 211, 231);
+    font-size: x-large;
+}
+.login form {
+    position: absolute;
+    background-color: rgba(184, 217, 230, 0.796);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    width: 30%;
+    height: 60%;
+    margin-left: 30%;
+    margin-top: 5%;
+    box-shadow: #84b1cd 0px 2px 2px 4px;
+}
+.signUp form {
+    position: absolute;
+    background-color: rgba(184, 217, 230, 0.796);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    width: 30%;
+    height: 66%;
+    margin-left: 30%;
+    margin-top: 5%;
+    box-shadow: #84b1cd 0px 2px 2px 4px;
+}
+form h2 {
+    margin-top: -10px;
+}
+.card1 {
+    width: 300px;
+    height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 2px 2px blue;
+}
+.card1:hover {
+    height: 40px;
+    width: 310px;
+    box-shadow: 2px 2px 2px 2px rgb(2, 2, 31);
+}
+.button, .CreateAccount {
+    background-color: aqua;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px blue;
+    display: block;
+    margin: 10px auto;
+}
+.button:hover, .CreateAccount:hover {
+    height: 35px;
+    width: 160px;
+    box-shadow: 2px 2px 2px 2px blue;
+    cursor: pointer;
+    font-size: medium;
+}
+.input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 80%;
+    height: 100%;
+    margin-left: 35px;
+}
+.h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signUp p {
+    margin-top: 30px;
+    font-weight: bold;
+}
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+.content img {
+    width: 100px;
+    height: 100px;
+}
+.middle-content {
+    text-align: center;
+    margin-top: 50px;
+}
+footer {
+    margin-top: auto;
+    color: white;
+    background-color: rgb(5, 64, 158);
+    height: 30px;
+    text-align: center;
+}
+footer p {
+    margin-top: 5px;
+}
+.h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
