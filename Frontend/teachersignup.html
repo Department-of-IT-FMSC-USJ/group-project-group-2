@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EduLink - Teacher Sign Up</title>
+    <link rel="icon" href="resources/icon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="parent-login.css">
+    <script src="../Backend/teacherlogin.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="resources/icon.jpeg" alt="EduLink icon" class="icon">
+        <h1>Gateway to effective student monitoring and management</h1>
+        
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </div>
+
+    <div class="signUp">
+        <form action="../Backend/teachersignup.php" method="POST" id="teacher_login">
+            <h2 id="teacher_login_title">Teacher Sign Up</h2>
+
+            <div class="card1">
+                <input class="input" type="number" name="teach_id" placeholder="Teacher ID" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="text" name="full_name" placeholder="Full Name" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="text" name="user_name" placeholder="Username" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="password" name="password" placeholder="Password" 
+                       pattern="(?=.*[A-Z])(?=.*\d).{8,10}" 
+                       title="Password must contain at least one uppercase letter, one number, and be 8-10 characters long"
+                       required>
+            </div>
+
+            <div class="card1">
+                <select class="input" name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="text" name="mobile" placeholder="Mobile" maxlength="15" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="text" name="qualifications" placeholder="Qualifications" required>
+            </div>
+
+            <div class="card1">
+                <input class="input" type="date" name="hire_date" placeholder="Hire Date" required>
+            </div>
+
+            <label><input class="checkbox" type="checkbox" required> I agree to Terms & Conditions</label><br><br>
+            <button class="CreateAccount" type="submit">Create Account</button>
+        </form>
+    </div>
+
+</body>
+<footer>
+    <p>&copy; 2024 EduLink. All rights reserved.</p>
+</footer>
+</html>
