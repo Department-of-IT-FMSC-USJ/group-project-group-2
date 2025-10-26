@@ -26,7 +26,7 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <title>Edulink - Enter Details</title>
-    <link rel="stylesheet" href="../Frontend/style.css">
+    <link rel="stylesheet" href="../Frontend/mark_style.css">
 </head>
 <body>
 <div style="text-align:center;">

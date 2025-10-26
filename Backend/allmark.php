@@ -63,7 +63,7 @@ if (!$result) die("Query Error: " . $conn->error);
 <head>
 <meta charset="UTF-8">
 <title>Enter Marks</title>
-<link rel="stylesheet" href="../Frontend/style.css">
+<link rel="stylesheet" href="../Frontend/mark_style.css">
 </head>
 <body>
 <center>

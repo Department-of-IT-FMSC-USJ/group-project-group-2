@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Submit All Marks</title>
-    <link rel="stylesheet" href="../Frontend/style.css">
+    <link rel="stylesheet" href="../Frontend/mark_style.css">
 </head>
 <body>
 <?php

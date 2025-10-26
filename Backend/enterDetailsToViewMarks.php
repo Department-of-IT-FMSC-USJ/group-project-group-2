@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Edulink - View Marks</title>
-<link rel="stylesheet" href="../Frontend/style.css">
+<link rel="stylesheet" href="../Frontend/mark_style.css">
 </head>
 <body>
 <div style="text-align:center;">
