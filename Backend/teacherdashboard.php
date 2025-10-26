@@ -20,12 +20,10 @@
             <?php 
                 session_start(); 
                 echo htmlspecialchars($_SESSION['teacher_username']); 
-            ?>!
-        </h2>
-        <button class="button1">Add Marks</button>
-        <button class="button2">View Attendance</button>
-        <button class="button3">Manage Students</button>
-        <button class="button4">Reports</button>
+            ?>
+        <br>
+        <button class="button1" onclick="window.location.href='teacherTaskSelect.php'">View Activities</button>
+        
     </div>
 
     <footer>
