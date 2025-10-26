@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             if($result->num_rows>0){
 
                 echo"<html>";
-                echo"<head> <link rel='stylesheet' href='../Frontend/styles.css'></head>" ;  
+                echo"<head> <link rel='stylesheet' href='../Frontend/stylesforall.css'></head>" ;  
                 echo"<body>";
 
                 echo"<table class='table'>";

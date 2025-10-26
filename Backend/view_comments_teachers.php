@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
           
             $result=$conn->query($sql);
             echo"<html>";
-            echo"<head> <link rel='stylesheet' href='../Frontend/styles.css'></head>" ;  
+            echo"<head> <link rel='stylesheet' href='../Frontend/stylesforall.css'></head>" ;  
             echo"<body class='tablebody'>";
 
             echo"<table class='table'> ";
