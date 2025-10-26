@@ -1,0 +1,96 @@
+body {
+    background-image: url('resources/background_image.jpeg');
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;                
+    margin: 0;         
+    font-family: Arial, sans-serif;
+                   
+}
+
+
+form {
+    background-color: rgba(170, 220, 245, 0.842); 
+    padding: 20px;                            
+    border-radius: 10px;                      
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  
+    display: inline-block;                    
+    text-align: left;
+}
+input[type = radio] {
+    margin: 10px; 
+    
+
+}
+input[type = submit] {
+    display: block;        
+    margin: 20px auto;     
+    background-color: #2397c4;               
+    padding: 10px 20px;        
+    border: 2px solid #1a6a8c;                  
+    border-radius: 10px;        
+    cursor: pointer;
+          
+}
+input[type = submit]:hover {
+    background-color: #1a6a8c; 
+    color: white;              
+}
+input[type=text], input[type=number] {              
+    padding: 8px;                         
+    box-sizing: border-box;   
+    border: 2px solid gainsboro;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 180px;
+    background-color: white;
+
+    
+          
+}
+button {
+    display: block;        
+    margin: 20px auto;     
+    background-color: #2397c4;               
+    padding: 10px 20px;        
+    border: 2px solid #1a6a8c;                  
+    border-radius: 10px;        
+    cursor: pointer;
+          
+}
+button:hover {
+    background-color: #1a6a8c; 
+    color: white;              
+}
+input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+
+select {
+    padding: 8px;                        
+    box-sizing: border-box;   
+    border: 2px solid #ccc;   
+    border-radius: 5px;  
+    display: block;
+    margin: auto; 
+    width: 180px; 
+    text-align: center;   
+}
+table {
+      border-collapse: collapse;
+      border-color: black;
+
+}
+th, td {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: center;
+      
+}
+table td {
+    height: 0px;
+}
