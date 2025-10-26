@@ -11,6 +11,7 @@ body {
 
 
 form {
+    margin-top: 100px;
     background-color: rgba(170, 220, 245, 0.842); 
     padding: 20px;                            
     border-radius: 10px;                      
