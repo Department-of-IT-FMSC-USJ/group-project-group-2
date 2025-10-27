@@ -1,0 +1,139 @@
+body
+{
+    margin:0;
+    border:0;
+    padding:0;
+    background-image: url(../../resources/attendance.jpg);
+     min-height: 100vh;
+    min-width: 100vw;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 100vw 100vh;
+}
+
+#body1
+{
+    
+    display:flex;
+    margin:0;
+    border:0;
+    min-height: 88vh;
+    min-width: 90vw;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+header
+{
+    background-color: rgba(19, 100, 199, 0.589);
+    height:75px;
+    width: 100%;
+    margin:0;
+    border:0;
+    padding:0;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+#select_class
+{
+    font-size: 50px;
+    font-family:cursive;
+    color: blue;
+    text-shadow: 2px 2px 5px rgba(12, 15, 231, 0.6);
+}
+
+
+
+
+.option select
+{
+    
+    font-size: 25px;
+    border:2px outset rgb(34, 34, 163);
+    margin:0;
+    padding:0;
+    border-radius: 6px;
+    color: rgb(15, 70, 210);
+
+   
+
+}
+
+.option select:hover {
+  border-color: rgb(69, 52, 182);
+  background-color: rgb(176, 222, 246);
+}
+
+.option select:focus {
+  border-color: rgb(69, 52, 182);
+  background-color: rgb(175, 225, 246);
+
+}
+
+.option select option {
+  
+  color: rgb(16, 16, 106);
+ 
+}
+
+.att_forms
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(16, 16, 121);
+    box-shadow: 4px 4px rgba(16, 16, 121,0.53);
+    border-radius: 8px;
+    height: 300px;
+    width:350px;
+    background-image: url(../../resources/att.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 350px 300px;
+    margin:0;
+    padding:0;
+
+}
+
+.enter
+{
+
+    color:rgb(16, 85, 153);
+    font-size: 25px;
+    border:2px dashed rgb(13, 13, 195)
+
+}
+
+.enter:hover
+{
+    background-color: rgb(111, 211, 242);
+}
+
+.enter:focus
+{
+    background-color: rgb(104, 181, 205);
+}
+
+.stTable
+{
+    border:2px solid black;
+}
+
+#rect
+{
+    display:flex;
+    background: linear-gradient(to top,rgba(31, 76, 183, 0.4),rgba(176, 201, 239, 0.4));
+    width:450px;
+    height:400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border:2px solid rgba(67, 5, 125, 0.747);
+}
