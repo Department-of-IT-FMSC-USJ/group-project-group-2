@@ -22,6 +22,7 @@
         <input type="radio" name="option" value="Extra-curricular">Extra-curricular<br><br>
         <input type="radio" name="option" value="attendance">Attendance<br><br>
         <input type="submit" name="submitbtn" value="submit" placeholder="submit">
+        <button type="button" onclick="window.location.href='teacherdashboard.php'">Back</button>
     
 
 

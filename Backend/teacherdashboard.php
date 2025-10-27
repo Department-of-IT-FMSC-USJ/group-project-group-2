@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="..resources/icon.jpeg" alt="EduLink icon" class="icon">
+        <img src="../resources/icon.jpeg" alt="EduLink icon" class="icon">
         <h1>Gateway to Effective Student Monitoring and Management</h1>
         <nav class="nav-links">
             <a href="../Frontend/home.html">Home</a>
