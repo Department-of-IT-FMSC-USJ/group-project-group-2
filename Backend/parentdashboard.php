@@ -19,7 +19,7 @@
         
         <button class="button1">Add Marks</button>
         <button class="button2">View Attendance</button>
-        <button class="button3">Manage Students</button>
+        <a href="../Frontend/view_comments_parents.html"><button class="button3">View Comments</button></a>
         <button class="button4">Reports</button>
     </div>
 </body>

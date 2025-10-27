@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>EduLink-Updating Teachers Information</title>
+    <link rel="stylesheet" href="stylesforall.css">
+</head>
+
+<body>
+    <div>
+        <h3>To add new teachers</h3>
+        <a href="add_teachers.html">
+            <button type="button">Add</button></a>
+    </div>
+    <div>
+        <h3>To remove teachers</h3>
+        <a href="remove_teachers.html">
+            <button>Remove</button></a>
+    </div>
+    <div>
+        <h3>To update teachers' information</h3>
+        <form action="../Backend/update_teachers.php" method="post">
+
+            <lable>Teacher ID</lable>
+            <input type="number" name="teachid" placeholder="Teacher ID" required><br><br>
+
+            <lable>Select the field to be updated</lable>
+            <select name="column_name" required>
+                <option value="user_name">User Name</option>
+                <option value="password">Password</option>
+                <option value="email">Email</option>
+                <option value="mobile">Phone no</option>
+                <option value="qualifications">Qualifications</option>
+            </select><br><br>
+
+            <lable>New Value:</lable>
+            <input type="text" name="new_value" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <section class="back-container2">
+        <a href="../Backend/admindashboard.php"><button type="submit" class="back">Back</button></a>
+    </section>
+</body>
+
+</html>

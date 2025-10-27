@@ -1,0 +1,172 @@
+    body {
+        font-family: Arial;
+        display: flex;
+        background-image: url('../resources/background_image.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    
+    div {
+        margin-left: 5%;
+        margin-top: 10%;
+        border: 2px solid #0b72e9;
+        width: 25%;
+        height: 60%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+    
+    .divaddcomm {
+        margin-left: 5%;
+        margin-top: 9%;
+        border: 2px solid #0b72e9;
+        width: 27%;
+        height: 65%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    .divadd {
+        margin-left: 5%;
+        margin-top: 4%;
+        border: 2px solid #0b72e9;
+        width: 27%;
+        height: 85%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    .divview {
+        margin-left: 5%;
+        margin-top: 7%;
+        border: 2px solid #0b72e9;
+        width: 27%;
+        height: 70%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    .divp {
+        margin-left: 38%;
+        margin-top: 7%;
+        border: 2px solid #0b72e9;
+        width: 27%;
+        height: 60%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    button {
+        width: 70%;
+        padding: 10px;
+        background-color: #0b72e9;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        margin-left: 15%;
+    }
+    
+    button:hover {
+        background-color: #084aad;
+        transform: scale(1.09);
+    }
+    
+    label {
+        font-weight: bold;
+        margin-left: 2%;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 2px;
+        border: 1px solid white;
+        border-radius: 6px;
+    }
+    
+    h3,
+    h2 {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .table {
+        border-collapse: separate;
+        border-spacing: 10px;
+        background-color: #ffffff;
+        border: 2px solid #003366;
+        border-radius: 10px;
+        font-size: 17px;
+        width: 50%;
+        height: 50%;
+        margin-top: 10%;
+        margin-left: 25%;
+        text-align: center;
+    }
+    
+    .th {
+        background-color: #003366;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        height: 5px;
+    }
+    
+    .td {
+        background-color: #e6f0fa;
+        padding: 5px;
+        border-radius: 6px;
+    }
+    
+    .hd {
+        text-align: center;
+        padding: 15px;
+        height: 6px;
+    }
+    
+    .back {
+        width: 70%;
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .back:hover {
+        background-color: black;
+        transform: scale(1.09);
+    }
+    
+    .back-container {
+        position: fixed;
+        bottom: 30px;
+        width: 20%;
+        text-align: center;
+        margin-left: 42%;
+    }
+    
+    .back-container2 {
+        position: fixed;
+        bottom: 30px;
+        width: 20%;
+        text-align: center;
+        margin-left: 38%;
+    }
