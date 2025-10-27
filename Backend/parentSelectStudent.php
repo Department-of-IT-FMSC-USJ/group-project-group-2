@@ -37,6 +37,7 @@
         </select><br><br>
 
         <input type="submit" name="submit" value="Submit">
+        <button type="button" onclick="window.location.href='parentdashboard.php'">Back</button>
     </form>
 </body>
 </html>
