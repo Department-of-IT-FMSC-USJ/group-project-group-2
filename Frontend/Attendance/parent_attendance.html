@@ -4,33 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Student</title>
+    <title>Attendance</title>
 
     <link rel="stylesheet" href="parent_attend.css">
+    <script src="https://kit.fontawesome.com/f797e4815a.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    
-    <div id="selectSt">
+
+
+    <header>
+        <div>Home</div>
+        <div>Academics</div>
+        <div><a href="../Attendance/parent_attendance.html">Attendance</a></div>
+        <div><a href="../fee_status.html">Fee Payments</a></div>
+        <div>Extra-Curriculars</div>
+        <div>Teacher Comments</div>
+    </header>
+
+    <div id="att">
         <div class="attend">
-            <form method="post" action="../../Backend/Attendance/student.php" >
-                <div class="select-wrapper">
-                <div style="font-size: 30px; color: blue; font-family: Arial;"><label>Select your Child's Name and Student ID:</label></div>
-                <div><select name="stu" id="stu" class="stusel">
-                    
-                </select>
-                </div>
-                <div><button type="submit">Enter</button></div>
-                </div>
-            </form>
+            <div>
+                <p id="stat">Your child is <span id="att_status">..</span> today!</p>
+            </div>
+
+            <div>
+                <p id="tdy"></p>
+            </div>
+
+            <label class="check">Check your child's attendance percentage for the year:</label><div><button class="check" onclick="tdy_att()">Check</button></div>
         </div>
-   
-    <script src="../../Backend/Attendance/select_student.js"> </script>
-
-    <script>sel_stu()</script>
+    </div>
 
 
- </div>
+    <script src="../../Backend/Attendance/parent_att.js"></script>
+    <script>att_status()</script>
+
+
+
 </body>
 
 </html>
