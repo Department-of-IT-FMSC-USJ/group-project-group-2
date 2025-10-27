@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Student</title>
+
+    <link rel="stylesheet" href="parent_attend.css">
+</head>
+
+<body>
+    
+    <div id="selectSt">
+        <div class="attend">
+            <form method="post" action="../../Backend/Attendance/student.php" >
+                <div class="select-wrapper">
+                <div style="font-size: 30px; color: blue; font-family: Arial;"><label>Select your Child's Name and Student ID:</label></div>
+                <div><select name="stu" id="stu" class="stusel">
+                    
+                </select>
+                </div>
+                <div><button type="submit">Enter</button></div>
+                </div>
+            </form>
+        </div>
+   
+    <script src="../../Backend/Attendance/select_student.js"> </script>
+
+    <script>sel_stu()</script>
+
+
+ </div>
+</body>
+
+</html>
