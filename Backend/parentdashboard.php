@@ -21,6 +21,9 @@
         <a href="../Frontend/Attendance/select_student_attendance.html"><button class="button2">View Attendance</button></a>
         <a href="../Frontend/view_comments_parents.html"><button class="button3">View Comments</button></a>
         <button class="button4">Reports</button>
+        <a href="parent_dashboard.php"><button class="button4">View Extracurricular Performance</button></a>
+
+
     </div>
 </body>
 <footer>
