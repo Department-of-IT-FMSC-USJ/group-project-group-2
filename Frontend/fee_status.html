@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Status</title>
+
+    <link rel="stylesheet" href="../Frontend/Attendance/parent_attend.css">
+</head>
+
+<body>
+
+   <header>
+        <div>Home</div>
+        <div>Academics</div>
+        <div><a href="Attendance/parent_attendance.html">Attendance</a></div>
+        <div><a href="fee_status.html">Fee Payments</a></div>
+        <div>Extra-Curriculars</div>
+        <div>Teacher Comments</div>
+    </header>
+    <div class="attend">
+        <form method="post">
+            <select name="month" id="month" class="stusel">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <button type="button" onclick="fee_status()">Enter</button>
+        </form>
+
+        <div id="stat">The fees for the month of <span id="month1"></span> is <span id="status"></span></div>
+    </div>
+    <script src="../Backend/fee_status.js"></script>
+    
+</body>
+
+</html>
