@@ -53,14 +53,21 @@ $result = $conn->query("SELECT * FROM extracurricular ORDER BY activity_id ASC")
       font-family: Arial, sans-serif;
       background-color: #f8f8f8;
       padding: 30px;
+
+      background-image:url('../resources/background_image.jpeg'); 
+      background-size: cover;      
+      background-position: center;  
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
     }
     h2 { color: #333; }
     table {
       border-collapse: collapse;
-      width: 70%;
+      width: 80%;       
+      margin: 20px auto; 
       background-color: white;
       box-shadow: 0 0 5px #ccc;
-      margin-top: 20px;
+
     }
     th, td {
       border: 1px solid #ccc;
@@ -87,60 +94,77 @@ $result = $conn->query("SELECT * FROM extracurricular ORDER BY activity_id ASC")
     input[type=submit]:hover {
       background-color: #45a049;
     }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto; 
+      text-align: center; 
+      background-color: rgba(255,255,255,0.9); 
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-
-<h2>Manage Extracurricular Activities</h2>
-
-
-<?php if ($message) echo $message; ?>
-
-<form method="post">
-  <label><strong>New Activity Name:</strong></label>
-  <input type="text" name="name" placeholder="Enter activity name" required>
-  <input type="submit" name="add" value="Add Activity">
-</form>
+  <div class ="container">
+    <h2>Manage Extracurricular Activities</h2>
 
 
-<h3>Existing Activities</h3>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Action</th>
-  </tr>
+    <?php if ($message) echo $message; ?>
 
-  <?php
-  if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-          echo "<tr>
-                  <td>{$row['activity_id']}</td>
-                  <td>{$row['name']}</td>
-                  <td><a href='manage_extracurricular.php?delete={$row['activity_id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
-                </tr>";
+    <form method="post">
+      <label><strong>New Activity Name:</strong></label>
+      <input type="text" name="name" placeholder="Enter activity name" required>
+      <input type="submit" name="add" value="Add Activity">
+    </form>
+
+
+    <h3>Existing Activities</h3>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+
+      <?php
+      if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              echo "<tr>
+                      <td>{$row['activity_id']}</td>
+                      <td>{$row['name']}</td>
+                      <td><a href='manage_extracurricular.php?delete={$row['activity_id']}' onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
+                    </tr>";
+          }
+      } else {
+          echo "<tr><td colspan='3'>No activities found</td></tr>";
       }
-  } else {
-      echo "<tr><td colspan='3'>No activities found</td></tr>";
-  }
-  ?>
-</table>
-<a href="teacher_dashboard.php" 
-   style="display:block;
-          text-align:center;
-          margin-top:25px;
-          background:#2b7de9;
-          color:#fff;
-          text-decoration:none;
-          padding:10px 20px;
-          border-radius:6px;
-          font-weight:bold;
-          transition:0.3s;
-          width:fit-content;
-          margin-left:auto;
-          margin-right:auto;">
-     Back to Dashboard
-</a>
+      ?>
+    </table>
+    <a href="teacher_dashboard.php" 
+      style="display:block;
+              text-align:center;
+              margin-top:25px;
+              background:#2b7de9;
+              color:#fff;
+              text-decoration:none;
+              padding:10px 20px;
+              border-radius:6px;
+              font-weight:bold;
+              transition:0.3s;
+              width:fit-content;
+              margin-left:auto;
+              margin-right:auto;">
+        Back to Dashboard
+    </a>
+
+
+
+    
+  </div>
+
 
 </body>
 </html>

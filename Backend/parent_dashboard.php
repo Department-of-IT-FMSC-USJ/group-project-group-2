@@ -41,6 +41,14 @@ $stmt->close();
       display: flex;
       justify-content: center;
       align-items: flex-start;
+
+
+
+      background-image: url('../resources/background_image.jpeg'); 
+      background-size: cover;      
+      background-position: center;  
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
     }
 
     .container {

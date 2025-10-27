@@ -15,6 +15,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+
+
+      background-image:url('../resources/background_image.jpeg'); 
+      background-size: cover;      
+      background-position: center;  
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
     }
 
     .dashboard-container {
@@ -70,6 +78,9 @@
       from { opacity: 0; transform: translateY(-15px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+
+    
   </style>
 </head>
 <body>

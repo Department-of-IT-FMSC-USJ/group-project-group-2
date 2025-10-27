@@ -50,6 +50,14 @@ $activities = $conn->query("SELECT activity_id, name FROM extracurricular");
       align-items: flex-start;
       min-height: 100vh;
       flex-direction: column;
+
+
+
+      background-image: url('../resources/background_image.jpeg'); 
+      background-size: cover;      
+      background-position: center;  
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
     }
 
     .container {
@@ -186,9 +194,9 @@ $activities = $conn->query("SELECT activity_id, name FROM extracurricular");
 
       <label>Status:</label>
       <select name="status">
-        <option value="Active">Active</option>
-        <option value="Inactive">Inactive</option>
-       
+        <option value="Pending">Active </option>
+        <option value="Completed">Inactive</option>
+        
       </select>
 
       <label>Value (points):</label>
