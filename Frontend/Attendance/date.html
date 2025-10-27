@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+
+    <link rel="stylesheet" href="date.css">
+    <script src="https://kit.fontawesome.com/f797e4815a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="date">
+        <div id="today">
+            <i class="fa-regular fa-calendar-days fa-bounce" style="color:rgb(23, 23, 77);"></i><span id="day"></span>
+
+            <script>
+                const today = new Date();
+                document.getElementById("day").innerHTML = today.toDateString();
+            </script>
+        </div>
+    </div>
+
+    <div class="date">
+        <form action="../../Backend/Attendance/date.php" method="post">
+            <p id="question"> Is it a school day?</p>
+            <label for="status" id="answer">Yes</label><input type="radio" name="status" value="Yes">
+            <label for="status" id="answer">No</label><input type="radio" name="status" value="No">
+
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
