@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url ("../resources/login.jpg");
+    background-image: url('../resources/login.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
