@@ -91,12 +91,12 @@ header
     border: 3px solid rgb(16, 16, 121);
     box-shadow: 4px 4px rgba(16, 16, 121,0.53);
     border-radius: 8px;
-    height: 300px;
+    height: 350px;
     width:350px;
     background-image: url(../../resources/att.jpg);
     background-repeat: no-repeat; 
     background-position: center;
-    background-size: 350px 300px;
+    background-size: 350px 350px;
     margin:0;
     padding:0;
 
@@ -136,4 +136,22 @@ header
     justify-content: center;
     border-radius: 10px;
     border:2px solid rgba(67, 5, 125, 0.747);
+}
+
+a
+{
+    font-family: cursive;
+    color: rgb(70, 2, 82);
+}
+
+a:hover
+{
+    font-size: 17px;
+    color: green;
+
+}
+
+a:focus
+{
+    color: lightgreen;
 }
