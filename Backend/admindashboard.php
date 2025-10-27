@@ -28,7 +28,7 @@ if (!isset($_SESSION['admin_username']))
     </div>
 <div class="dashboard">
         <h2>Welcome back, <?php echo htmlspecialchars($_SESSION['admin_username']); ?>!</h2>
-        <button onclick="">Add New Student</button>
+        <a href="../Frontend/teachers.html"><button onclick="">Manage teachers</button></a>
 </div>
 </body>
 <footer>

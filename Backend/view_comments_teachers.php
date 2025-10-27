@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'dbconnection.php';
+include 'db.php';
 
 $tid = $_SESSION['teacher_id'];
 
@@ -19,21 +19,29 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     if($result->num_rows>0){
          
-        $sql="SELECT class_name FROM student_class WHERE stu_id='$stuid'";
-        $result=$conn->query($sql);
-        $value=$result->fetch_assoc()['class_name'];
+        $where="c.created_at BETWEEN '$sdate' AND '$edate' AND c.teach_id='$tid' ";
+        if(!empty($class)){
+            $where .=" AND sc.class_name ='$class'";
+        }
+        if(!empty($stuid)){
+            $sql="SELECT class_name FROM student_class WHERE stu_id='$stuid'";
+            $result=$conn->query($sql);
+            $value=$result->fetch_assoc()['class_name'];
 
-        if($value==$class){
+            if($value==$class){
 
-            $where="c.created_at BETWEEN '$sdate' AND '$edate' AND c.teach_id='$tid' ";
-            if(!empty($class)){
-                $where .=" AND sc.class_name ='$class'";
-            }
-            if(!empty($stuid)){
                 $where .= " AND c.stu_id='$stuid'";
             }
-       
-            $sql = "SELECT c.comm_id, s.stu_id, s.f_name, c.comment, c.created_at
+
+            else{
+            echo"<script>
+            alert('Student NO: $stuid NOT a student of class $class');
+            window.location.href='../Frontend/view_comments_teachers.html';
+            </script>";
+            exit();
+            }
+        }
+        $sql = "SELECT c.comm_id, s.stu_id, s.f_name, c.comment, c.created_at
                 FROM comment c
                 JOIN student s ON c.stu_id = s.stu_id
                 JOIN student_class sc ON s.stu_id = sc.stu_id
@@ -69,14 +77,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             echo"</body>";
             echo"</html>";
         }
-        else{
-            echo"<script>
-            alert('Student NO: $stuid NOT a student of class $class');
-            window.location.href='../Frontend/view_comments_teachers.html';
-            </script>";
-            exit();   
-        }
-    }
+       
+    
     else{
         echo"<script>
         alert('No comments found');
