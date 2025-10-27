@@ -47,7 +47,7 @@ if (isset($_POST['submitbtn'])) {
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "attendance") {
-        header("Location: ");
+        header("Location:../Frontend/Attendance/teacher_attendance.html");
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "teacher-management") {

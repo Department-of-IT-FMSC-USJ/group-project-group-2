@@ -3,6 +3,11 @@ function getStudents() {
     document.getElementById("attForm").style.display = "block";
     document.getElementById("rect").style.width = '1000px';
     document.getElementById("rect").style.justifyContent = 'space-evenly';
+    document.getElementById("stuAttTable").innerHTML=`<tr>
+                                <th>Student ID</th>
+                                <th>Student Full Name</th>
+                                <th>Status</th>
+                            </tr>`;
     
 
     fetch('../../Backend/Attendance/teacher_attendance.php', {

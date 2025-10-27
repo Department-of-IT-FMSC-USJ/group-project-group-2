@@ -38,6 +38,7 @@ if(isset($_POST['status']))
                 {
                     $sql="insert into attendance values ($stuId,curdate(),'Present')";
                     $run=$conn->query($sql);
+                    header("Location:../../Frontend/Attendance/teacher_attendance.html");
                 }
             }
         }
