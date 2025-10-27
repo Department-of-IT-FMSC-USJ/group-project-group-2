@@ -186,9 +186,9 @@ $activities = $conn->query("SELECT activity_id, name FROM extracurricular");
 
       <label>Status:</label>
       <select name="status">
-        <option value="Pending">Pending</option>
-        <option value="Completed">Completed</option>
-        <option value="Approved">Approved</option>
+        <option value="Pending">Active</option>
+        <option value="Completed">Inactive</option>
+       
       </select>
 
       <label>Value (points):</label>
