@@ -9,7 +9,7 @@ if (!isset($_SESSION['parent_id'])) {
 }
 
 $parent_id = $_SESSION['parent_id'];
-$parent_name = $_SESSION['parent_name'] ?? 'Parent';
+$parent_name = $_SESSION['parent_username'] ?? 'Parent';
 
 
 $students_sql = "SELECT * FROM student WHERE parent_id = ?";
@@ -30,7 +30,7 @@ $stmt->close();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Parent Dashboard</title>
+  <title>Student Performance</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -111,10 +111,28 @@ $stmt->close();
       color: #1b5e20;
     }
 
-    .logout-btn {
+    .back-btn {
       display: block;
       width: fit-content;
       margin: 25px auto 0;
+      background-color: #1976d2;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #0d47a1;
+      transform: scale(1.05);
+    }
+
+    .logout-btn {
+      display: block;
+      width: fit-content;
+      margin: 10px auto;
       background-color: #ef5350;
       color: white;
       text-decoration: none;
@@ -193,7 +211,8 @@ $stmt->close();
       <p>No students found for this parent.</p>
     <?php endif; ?>
 
-    <a href="logout.php?from=parent" class="logout-btn">Logout</a>
+    <a href="parentdashboard.php" class="back-btn">← Back to Dashboard</a>
+    
   </div>
 </body>
 </html>

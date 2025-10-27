@@ -43,7 +43,7 @@ if (isset($_POST['submitbtn'])) {
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "Extra-curricular") {
-        header("Location: ");
+        header("Location:teacher_dashboard.php ");
         exit();
     }
     elseif (isset($_POST['option']) && $_POST['option'] == "attendance") {

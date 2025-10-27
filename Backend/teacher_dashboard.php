@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['teacher_id'])) {
-    header("Location: teacher_login.php");
-    exit();
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,13 +74,12 @@ if (!isset($_SESSION['teacher_id'])) {
 </head>
 <body>
   <div class="dashboard-container">
-    <h2>Welcome, <?= htmlspecialchars($_SESSION['teacher_name']) ?> </h2>
     <p style="color:#333;">Select an action below:</p>
 
     <ul>
       <li><a href="manage_extracurricular.php">To Manage Extracurricular Activities</a></li>
       <li><a href="teacher_give_points.php">To  Give Points to Students</a></li>
-      <li><a href="logout.php" class="logout-btn"> Logout</a></li>
+      <li><a href="teacherTaskSelect.php"class="logout-btn"> <--Back to Teacher Task Selection</a></li>
     </ul>
   </div>
 </body>
