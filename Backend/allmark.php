@@ -18,7 +18,6 @@ if ($conn->connect_error) die("Database Connection Failed: " . $conn->connect_er
 $term_id = null;
 $termName = null;
 
-
 $checkId = $conn->prepare("SELECT term_id, term_name FROM term WHERE term_id = ? LIMIT 1");
 $checkId->bind_param("s", $termSessionValue);
 $checkId->execute();
@@ -47,15 +46,34 @@ if (!$term_id || !$termName) {
          <p><a href='taskSelect.php'>Go Back</a></p></center>");
 }
 
-$sql = "SELECT s.stu_id AS Student_ID, CONCAT(s.f_name,' ',s.l_name) AS Student_Name
-        FROM student s
-        INNER JOIN student_subject ss ON s.stu_id = ss.stu_id AND ss.sub_id = '$subject_id' AND ss.status = 'following'
-        INNER JOIN student_class sc ON s.stu_id = sc.stu_id AND sc.class_name = '$class' AND sc.year_name = '$year'
-        LEFT JOIN marks m ON s.stu_id = m.stu_id AND m.sub_id = '$subject_id' AND m.term_id = '$term_id'
-        WHERE m.stu_id IS NULL
-        ORDER BY s.stu_id";
+$sql = "
+    SELECT 
+        s.stu_id AS Student_ID, 
+        CONCAT(s.f_name, ' ', s.l_name) AS Student_Name
+    FROM student s
+    INNER JOIN student_subject ss 
+        ON s.stu_id = ss.stu_id
+        AND ss.sub_id = ?
+        AND ss.status = 'following'
+    INNER JOIN student_class sc 
+        ON s.stu_id = sc.stu_id
+        AND sc.class_name = ?
+        AND sc.year_name = ?
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM mark m
+        WHERE m.stu_id = s.stu_id 
+        AND m.sub_id = ? 
+        AND m.term_id = ?
+    )
+    ORDER BY s.stu_id
+";
 
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sssss", $subject_id, $class, $year, $subject_id, $term_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
 if (!$result) die("Query Error: " . $conn->error);
 ?>
 <!DOCTYPE html>
@@ -80,10 +98,10 @@ if (!$result) die("Query Error: " . $conn->error);
             </tr>
             <?php while($row = $result->fetch_assoc()): ?>
             <tr>
-                <td><?php echo $row['Student_ID']; ?></td>
-                <td><?php echo $row['Student_Name']; ?></td>
+                <td><?php echo htmlspecialchars($row['Student_ID']); ?></td>
+                <td><?php echo htmlspecialchars($row['Student_Name']); ?></td>
                 <td>
-                    <input type="number" name="marks[<?php echo $row['Student_ID']; ?>]" min="0" max="100">
+                    <input type="number" name="marks[<?php echo htmlspecialchars($row['Student_ID']); ?>]" min="0" max="100">
                 </td>
             </tr>
             <?php endwhile; ?>
@@ -91,13 +109,17 @@ if (!$result) die("Query Error: " . $conn->error);
         <input type="submit" name="submitAllMarks" value="Submit Marks">
     </form>
 <?php else: ?>
-    <p>All students already have marks or no students follow this subject.</p>
+    <p>✅ All students already have marks recorded for this subject and term, or no students follow this subject.</p>
     <button onclick="window.location.href='teacherTaskSelect.php'">Back to selection</button>
 <?php endif; ?>
 </center>
 </body>
 </html>
-<?php $conn->close(); ?>
+<?php 
+$stmt->close();
+$conn->close();
+?>
+
 
 
 
