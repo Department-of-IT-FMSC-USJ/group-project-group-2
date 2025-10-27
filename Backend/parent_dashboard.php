@@ -4,7 +4,7 @@ include 'db_connect.php';
 
 
 if (!isset($_SESSION['parent_id'])) {
-    header("Location: parent_login.php");
+    header("Location: ../Frontend/parentlogin.html");
     exit();
 }
 
