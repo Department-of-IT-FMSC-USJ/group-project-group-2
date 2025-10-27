@@ -24,8 +24,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $value=$result->fetch_assoc()['class_name'];
             if($value==$class){
 
-                $sql="INSERT INTO comment(stu_id,teach_id,comment,class_name)
-                VALUES('$stu_id' , '$tid' , '$comm' , '$class')";
+                $sql="INSERT INTO comment(stu_id,teach_id,comment)
+                VALUES('$stu_id' , '$tid' , '$comm')";
                 if($conn->query($sql)==TRUE){
                     echo "<script>
                     alert('Add the comment successfully !' );

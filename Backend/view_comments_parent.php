@@ -62,6 +62,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                     echo"<td class='td'>" . htmlspecialchars($values['created_at']) . "</td>";
                     echo"</tr>";
                 }
+                echo"<section class='back-container'>";
+                echo"<a href='../Frontend/view_comments_parents.html'><button type='submit' class='back'>Back</button></a>";
+                echo"</section>";
                 echo"</table>";
                 echo"</body>";
                 echo"</html>";

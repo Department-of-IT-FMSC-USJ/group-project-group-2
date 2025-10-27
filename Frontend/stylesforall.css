@@ -22,12 +22,22 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
     
-    .divadd {
+    .divaddcomm {
         margin-left: 5%;
-        margin-top: 7%;
+        margin-top: 9%;
         border: 2px solid #0b72e9;
         width: 27%;
-        height: 80%;
+        height: 65%;
+        background-color: #1fe3f1;
+        border-radius: 10px;
+    }
+    
+    .divadd {
+        margin-left: 5%;
+        margin-top: 4%;
+        border: 2px solid #0b72e9;
+        width: 27%;
+        height: 85%;
         background-color: #1fe3f1;
         border-radius: 10px;
     }
@@ -106,7 +116,7 @@
         width: 50%;
         height: 50%;
         margin-top: 10%;
-        margin-left: 20%;
+        margin-left: 25%;
         text-align: center;
     }
     
