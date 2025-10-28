@@ -1,24 +1,27 @@
 <?php
 session_start();
 $conn = new mysqli("localhost", "root", "", "edulink");
-if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+if ($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
+} else{
 
-if(isset($_POST['submit'])) {
-    $subject_id = $_POST['Subject'];
-    $stmt = $conn->prepare("SELECT name FROM subject WHERE sub_id = ?");
-    $stmt->bind_param("s", $subject_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $subject_name = $result->fetch_assoc()['name'];
+    if(isset($_POST['submit'])) {
+        $subject_id = $_POST['Subject'];
+        $stmt = $conn->prepare("SELECT name FROM subject WHERE sub_id = ?");
+        $stmt->bind_param("i", $subject_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $subject_name = $result->fetch_assoc()['name'];
 
-    $_SESSION['Year'] = $_POST['Year'];
-    $_SESSION['Term'] = $_POST['Term'];
-    $_SESSION['Class'] = $_POST['Class'];
-    $_SESSION['Subject'] = $subject_name;
-    $_SESSION['SubjectId'] = $subject_id;
+        $_SESSION['Year'] = $_POST['Year'];
+        $_SESSION['Term'] = $_POST['Term'];
+        $_SESSION['Class'] = $_POST['Class'];
+        $_SESSION['Subject'] = $subject_name;
+        $_SESSION['SubjectId'] = $subject_id;
 
-    header("Location: allmark.php");
-    exit();
+        header("Location: allmark.php");
+        exit();
+    }
 }
 ?>
 <!DOCTYPE html>

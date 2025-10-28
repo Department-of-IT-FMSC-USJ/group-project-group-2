@@ -13,21 +13,13 @@ $subject_name = $_SESSION['Subject'];
 $subject_id = $_SESSION['SubjectId'];
 
 $conn = new mysqli("localhost", "root", "", "edulink");
-if ($conn->connect_error) die("Database Connection Failed: " . $conn->connect_error);
+if ($conn->connect_error){
+    die("Database Connection Failed: " . $conn->connect_error);
+}
 
 $term_id = null;
 $termName = null;
 
-$checkId = $conn->prepare("SELECT term_id, term_name FROM term WHERE term_id = ? LIMIT 1");
-$checkId->bind_param("s", $termSessionValue);
-$checkId->execute();
-$idResult = $checkId->get_result();
-
-if ($idResult && $idResult->num_rows > 0) {
-    $row = $idResult->fetch_assoc();
-    $term_id = $row['term_id'];
-    $termName = $row['term_name'];
-} else {
     $checkName = $conn->prepare("SELECT term_id, term_name FROM term WHERE term_name = ? AND year_name = ? LIMIT 1");
     $checkName->bind_param("ss", $termSessionValue, $year);
     $checkName->execute();
@@ -37,12 +29,11 @@ if ($idResult && $idResult->num_rows > 0) {
         $term_id = $row['term_id'];
         $termName = $row['term_name'];
     }
-    $checkName->close();
-}
-$checkId->close();
+    
+$checkName->close();
 
 if (!$term_id || !$termName) {
-    die("<center><h3 style='color:red;'>❌ Error: Term not found for '$termSessionValue' ($year)</h3>
+    die("<center><h3 style='color:red;'>❌ Error: Not term not found as '$termSessionValue' ($year)</h3>
          <p><a href='taskSelect.php'>Go Back</a></p></center>");
 }
 
@@ -70,7 +61,7 @@ $sql = "
 ";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sssss", $subject_id, $class, $year, $subject_id, $term_id);
+$stmt->bind_param("issii", $subject_id, $class, $year, $subject_id, $term_id);
 $stmt->execute();
 $result = $stmt->get_result();
 

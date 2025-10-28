@@ -31,11 +31,9 @@ if (isset($_POST['submit'])) {
 
     if (!empty($student_id) && !empty($year) && !empty($term_number)) {
 
-        // Convert term number to name
         $termNameMap = ["1" => "First", "2" => "Second", "3" => "Third"];
         $termText = $termNameMap[$term_number] ?? '';
 
-        // Get term_id based on year + term name
         $termQuery = $conn->prepare("SELECT term_id FROM term WHERE term_name = ? AND year_name = ?");
         $termQuery->bind_param("ss", $termText, $year);
         $termQuery->execute();

@@ -15,7 +15,9 @@ $class = $_SESSION['Class'] ?? '';
 $subject_id = $_SESSION['SubjectId'] ?? '';
 
 $conn = new mysqli("localhost", "root", "", "edulink");
-if ($conn->connect_error) die('Database Connection Error: ' . $conn->connect_error);
+if ($conn->connect_error){
+    die('Database Connection Error: ' . $conn->connect_error);          
+}
 
 $term_id = null;
 if (!empty($year) && !empty($term_name)) {
@@ -38,7 +40,9 @@ if (isset($_POST['submitAllMarks'])) {
     $marksArray = $_POST['marks'] ?? [];
 
     $stmt = $conn->prepare("INSERT INTO mark (stu_id, sub_id, term_id, marks) VALUES (?, ?, ?, ?)");
-    if (!$stmt) die("Prepare failed: " . $conn->error);
+    if (!$stmt){
+        die("Prepare failed: " . $conn->error);
+    }
 
     $inserted = 0;
     $skipped = 0;
@@ -49,8 +53,8 @@ if (isset($_POST['submitAllMarks'])) {
             continue;
         }
 
-        $marks = (float)$marks;
-        $stmt->bind_param("sssd", $stu_id, $subject_id, $term_id, $marks);
+        $marks = (int)$marks;
+        $stmt->bind_param("iiii", $stu_id, $subject_id, $term_id, $marks);
 
         if ($stmt->execute()) {
             $inserted++;
